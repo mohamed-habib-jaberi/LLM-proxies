@@ -1,0 +1,24 @@
+model_list:
+  - model_name: "global-llm"
+    litellm_params:
+      model: "groq/openai/gpt-oss-20b"
+      api_key: "os.environ/GROQ_API_KEY"
+      rpm: 20
+
+  - model_name: "global-llm"
+    litellm_params:
+      model: "groq/openai/gpt-oss-120b"
+      api_key: "os.environ/GROQ_API_KEY"
+      rpm: 20
+
+  - model_name: "global-llm"
+    litellm_params:
+      model: "openai/gpt-4o-mini"
+      api_key: "os.environ/OPENAI_API_KEY"
+      rpm: 10
+
+router_settings:
+  routing_strategy: simple-shuffle
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY

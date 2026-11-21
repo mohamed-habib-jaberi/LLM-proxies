@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+logs/*
+!logs/.gitkeep
+
+# Local editor and browser artifacts
+.DS_Store
+docs/article/medium-*.jpg

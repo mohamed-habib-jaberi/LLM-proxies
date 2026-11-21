@@ -1,0 +1,29 @@
+router_settings:
+  enable_pre_call_checks: true
+
+model_list:
+  - model_name: "groq-gemma9b"
+    litellm_params:
+      model: "groq/openai/gpt-oss-20b"
+      api_key: "os.environ/GROQ_API_KEY"
+
+  - model_name: "groq-mixtral"
+    litellm_params:
+      model: "groq/openai/gpt-oss-120b"
+      api_key: "os.environ/GROQ_API_KEY"
+
+  - model_name: "openai-gpt4o-mini"
+    litellm_params:
+      model: "openai/gpt-4o-mini"
+      api_key: "os.environ/OPENAI_API_KEY"
+      rpm: 20
+
+litellm_settings:
+  num_retries: 3
+  fallbacks: [{"openai-gpt4o-mini": ["groq-mixtral"]}]
+  request_timeout: 10
+  allowed_fails: 3 # per minute
+  cooldown_time: 30
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY

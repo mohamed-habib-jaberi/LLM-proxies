@@ -1,0 +1,6 @@
+litellm[proxy]
+openai
+python-dotenv
+jupyterlab
+ipykernel
+httpx
