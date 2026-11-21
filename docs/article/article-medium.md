@@ -248,3 +248,8 @@ OpenTelemetry is an instrumentation and export standard, not a tracing dashboard
 A useful next experiment would be to keep LiteLLM and compare tracing with Phoenix or LangSmith, or evaluate Portkey as an alternative gateway. Compare supported providers, routing, fallback behavior, authentication, trace content, hosting requirements, and cost. These tools have not been tested as part of this project; verify compatibility before replacing a component.
 
 
+
+
+## Project repository
+
+The notebook, configurations, diagrams, and documentation are available in the [LLM-proxies GitHub repository](https://github.com/mohamed-habib-jaberi/LLM-proxies). The repository is public: you can explore the code, configurations, and documentation on GitHub.
